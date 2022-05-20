@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import "./nav.css";
-import lightThemeLogo from "../../assets/theme.png";
-// import themeLogo from "../../assets/theme-dark.png";
+import lightThemeLogo from "../../social logos/theme.png";
+// import themeLogo from "../../social logos/theme-dark.png";
 
 
 export function Navbar(){
+    const { navigate } = useNavigate();
     return(
         <div className="nav-test">
-            <Link to="home.html"><div className="brand-name">Neo Quiz</div></Link>
+            <div onClick={()=>navigate("/")}className="brand-name">Neo Quiz</div>
             <img className="theme-icon" src={ lightThemeLogo } alt="theme_toggler"/>
         </div>
     )

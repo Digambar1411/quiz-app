@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import "./footer.css";
-import lightTwitterLogo from "../../assets/twitter-light.png";
-import lightGithubLogo from "../../assets/github-light.png";
-import lightLinkedinLogo from "../../assets/linkedin-light.png";
+import lightTwitterLogo from "../../social logos/twitter-light.png";
+import lightGithubLogo from "../../social logos/github-light.png";
+import lightLinkedinLogo from "../../social logos/linkedin-light.png";
 
-// import twitterDark from "../../assets/twitter1.png";
-// import linkedinDark from "../../assets/linkedin1.png";
-// import githubDark from "../../assets/github1.png";
+// import twitterDark from "../../social logos/twitter1.png";
+// import linkedinDark from "../../social logos/linkedin1.png";
+// import githubDark from "../../social logos/github1.png";
 
 
 export function Footer() {
@@ -15,29 +14,29 @@ export function Footer() {
             <footer className="footer">
                 <div className="footer-head">Made by Digambar</div>
                 <div className="social-icon-div">
-                    <Link to="https://github.com/Digambar1411">
+                    <a href="https://github.com/Digambar1411" target="_blank"  rel="noopener noreferrer">
                         <img
                             className="social-icon"
                             src={ lightGithubLogo }
                             alt="github_logo"
                         />
-                    </Link>
+                    </a>
 
-                    <Link to="https://twitter.com/deshawald14">
+                    <a href="https://twitter.com/deshawald14" target="_blank"  rel="noopener noreferrer">
                         <img
                             className="social-icon"
                             src={ lightTwitterLogo }
                             alt="twitter_logo"
                         />
-                    </Link>
+                    </a>
 
-                    <Link to="https://www.linkedin.com/in/digambar-deshawal-9b279b147/">
+                    <a href="https://www.linkedin.com/in/digambar-deshawal-9b279b147/" target="_blank"  rel="noopener noreferrer">
                         <img
                             className="social-icon"
                             src={ lightLinkedinLogo }
                             alt="linkedin_logo"
                         />
-                    </Link>
+                    </a>
                 </div>
             </footer>
         </>
