@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Footer } from "../../components/footer/footer";
 import { Navbar } from "../../components/navbar/nav";
-import {categories as data } from "../../../backend/db/categories";
+import { categories as data } from "../../../backend/db/categories";
 import "./home.css";
 
 export function Home(){
