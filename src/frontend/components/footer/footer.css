@@ -1,0 +1,24 @@
+.footer{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -2px 2px 0  rgb(0 0 0 / 20%);
+    background-color: var(--light-background-color);
+}
+
+.social-icon-div{
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.social-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.footer-head{
+    font-size: 1.5rem;
+}
