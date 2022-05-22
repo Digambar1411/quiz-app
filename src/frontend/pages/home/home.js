@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Footer } from "../../components/footer/footer";
-import { Navbar } from "../../components/navbar/nav";
+import { Footer, Navbar} from "../../components/index";
 import { categories as data } from "../../../backend/db/categories";
 import "./home.css";
 
