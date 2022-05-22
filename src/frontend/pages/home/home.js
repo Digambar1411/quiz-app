@@ -14,7 +14,7 @@ export function Home(){
                     { data.map(category=>(
                         <div className="category-card">
                             <img className="category-image" src={ category.image} alt={category.name}/>
-                            <Link  className="category-heading" to="/question">{category.name}</Link>
+                            <Link  className="category-heading" to="/rules">{category.name}</Link>
                         </div>))
                     }
                 </div>

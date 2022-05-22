@@ -1,0 +1,43 @@
+.rule-page{
+    position: relative;
+    height:320px;
+    margin:8rem auto;
+    width: 45%;
+    padding: 1.5rem;
+    border-radius:10px;
+    background-color:var(--color-white);
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.rule-heading{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.rules{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.25rem;
+}
+
+.play-btn{
+    padding: 10px;
+    width: 9rem;
+    background-color: var(--light-primary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+    display:flex;
+    justify-content: center;
+}
+
+.play-btn:hover{
+    cursor: pointer;
+    background-color:var(--light-hover);
+}
+
+body{
+    background-color:var(--light-background-color);
+}
