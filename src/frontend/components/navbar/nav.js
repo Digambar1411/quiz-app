@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import "./nav.css";
 import lightThemeLogo from "../../social logos/theme.png";
 // import themeLogo from "../../social logos/theme-dark.png";
 
 
 export function Navbar(){
-    const { navigate } = useNavigate();
+    const navigate  = useNavigate();
     return(
         <div className="nav-test">
             <div onClick={()=>navigate("/")}className="brand-name">Neo Quiz</div>
