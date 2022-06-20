@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
-import { QuestionProvider} from "./frontend/contexts/questionContext"
+import { QuestionProvider} from "./frontend/contexts/questionContext";
+import {CategoryProvider} from "./frontend/contexts/category-context";
 
 // Call make Server
 makeServer();
@@ -12,9 +13,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <QuestionProvider>
-        <App />
-      </QuestionProvider>
+      <CategoryProvider>
+        <QuestionProvider>
+          <App />
+        </QuestionProvider>
+      </CategoryProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
