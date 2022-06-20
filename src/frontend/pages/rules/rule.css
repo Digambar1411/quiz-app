@@ -6,7 +6,8 @@
     width: 40%;
     padding: 1.5rem;
     border-radius:10px;
-    background-color:var(--color-white);
+    /* background-color:var(--color-white); */
+    background-color: var(--light-background-color);
     box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
 }
 
