@@ -1,18 +1,8 @@
-:root{
-    --color-white:white;
-    --light-primary-color:#89b8b8;
-    --light-hover:#5bb8b8;
-    --light-font-color:black;
-    --light-background-color:#fcf8f8;
-    --dark-font-color:white;
-    --dark-primary-color:#13fafa;
-    --dark-background-color:#141616;
-    --dark-image-background-color:#2c2e2e;
-}
 
 /********************** light mode *************************/
 *{
-    margin: 0; 
+    margin: 0;
+    color:var(--foreground-color);
 }
 
 .title-main{
@@ -22,7 +12,7 @@
     padding:3rem;
     font-weight: 600;
     margin-top: 3rem;
-    color:var(--light-primary-color);
+    color:var(--primary-color);
 }
 
 .nav-test{
@@ -39,7 +29,7 @@
     font-size: 2rem;
     margin-left: 3rem;
     cursor: pointer;
-    color: var(--light-primary-color);
+    color: var(--primary-color);
     font-weight: bold;
     font-family:cursive;
 }
@@ -52,7 +42,7 @@
 }
 
 .nav-test, .footer{
-    background-color: var(--light-background-color);
+    background-color: var(--background-color);
     padding: 1rem 0rem;
     width: 100%;
     font-size: larger;
@@ -87,7 +77,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-primary-color);
+    border:none;
+    background-color: var(--primary-color);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-decoration: none;
@@ -96,11 +87,11 @@
 }
 
 .category-heading:hover{
-    background-color:var(--light-hover);
+    background-color:var(--primary-ascent);
 }
 
 .main-body{
-    background-color: var(--light-background-color);
+    background-color: var(--background-color);
     height: 600px;
 }
 
@@ -109,7 +100,7 @@
     width: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color:var(--color-white);
+    background-color:var(--image-background-color);
 }
 
 .footer{
@@ -119,7 +110,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px -2px 2px 0  rgb(0 0 0 / 20%);
-    background-color: var(--light-background-color);
+    background-color: var(--background-color);
 }
 
 .social-icon-div{
@@ -138,48 +129,6 @@
 .footer-head{
     font-size: 1.5rem;
 }
-
-
-
-/********************** for dark mode *************************/
-/* *{
-    color: var(--dark-font-color);
-}
-
-.nav-test,.footer,.main-body{
-    background-color: var(--dark-background-color);
-}
-
-.nav-test{
-    border-bottom:1px solid var(--dark-primary-color);
-}
-
-.title-main{
-    color:var(--dark-primary-color);
-}
-
-.footer{
-    border-top:1px solid var(--dark-primary-color);
-}
-
-.category-heading{
-    background-color: var(--dark-primary-color);
-    color: var(--color-white);
-}
-
-.brand-name{
-    color: var(--dark-primary-color);
-}
-
-.category-image{
-    background-color: var(--dark-image-background-color);
-} */
-
-
-
-
-
-
 
 
 
