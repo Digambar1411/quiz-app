@@ -11,7 +11,7 @@ export function Navbar(){
     return(
         <div className="nav-test">
             <div onClick={()=>navigate("/")}className="brand-name">Neo Quiz</div>
-            <img className="theme-icon" src={theme==="light"? lightThemeLogo : themeLogo} alt="theme_toggler"onClick={toggleTheme} />
+            <img className="theme-icon" src={theme==="light"? lightThemeLogo : themeLogo} alt="theme_toggler" onClick={toggleTheme} />
         </div>
     )
 }
