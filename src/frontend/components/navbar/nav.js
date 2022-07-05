@@ -10,7 +10,7 @@ export function Navbar(){
     const { theme, toggleTheme} = useTheme();
     return(
         <div className="nav-test">
-            <div onClick={()=>navigate("/")}className="brand-name">Neo Quiz</div>
+            <div onClick={()=>navigate("/")}className="brand-name">NeoQuiz</div>
             <img className="theme-icon" src={theme==="light"? lightThemeLogo : themeLogo} alt="theme_toggler" onClick={toggleTheme} />
         </div>
     )
