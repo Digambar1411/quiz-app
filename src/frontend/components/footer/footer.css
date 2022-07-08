@@ -1,15 +1,17 @@
 .footer{
     height: 150px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0px -2px 2px 0  rgb(0 0 0 / 20%);
-    background-color: var(--light-background-color);
+    background-color: var(--background-color);
 }
 
 .social-icon-div{
     display: flex;
+    justify-content: center;
     gap: 1rem;
     padding: 10px;
 }

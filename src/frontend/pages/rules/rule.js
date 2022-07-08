@@ -12,7 +12,7 @@ export function Rule(){
             <Navbar />
 
             <div className="rule-page">
-                <h2 className="rule-heading">Rules to Solve Quiz</h2>
+                <h2 className="rule-heading">Rules to Play Quiz</h2>
                 <ol className="rules">
                     <li>Select only 1 answer amongs the given options.</li>
                     <li>You will get 1 point for each correct answer.</li>
