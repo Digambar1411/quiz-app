@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Footer, Navbar} from "../../components/index";
-import { categories as data } from "../../../backend/db/categories";
+import { useQuestion, useCategory} from "../../contexts/index";
 import "./home.css";
 
 export function Home(){
+const { categories } = useCategory();
+const {getSelectedCategoryQuestions} = useQuestion();
+
     return(
         <>
            <Navbar />
@@ -11,11 +14,12 @@ export function Home(){
             <div className="main-body">
                 <div className="title-main">Top Quiz Categories</div>
                 <div className="categories-container">
-                    { data.map(category=>(
-                        <div className="category-card">
-                            <img className="category-image" src={ category.image} alt={category.name}/>
-                            <Link  className="category-heading" to="/rules">{category.name}</Link>
-                        </div>))
+                    { categories && categories.map(category=>{const  {_id, image, name} = category; 
+                    return (
+                        <div key={_id} className="category-card">
+                            <img className="category-image" src={ image} alt={name}/>
+                            <button className="category-heading" onClick={()=>getSelectedCategoryQuestions(name)}>{name}</button>
+                        </div>)})
                     }
                 </div>
             </div>
