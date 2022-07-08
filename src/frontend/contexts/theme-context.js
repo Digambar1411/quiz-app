@@ -1,34 +1,34 @@
-import { useState, useEffect, useLayout, createContext, useContext, useLayoutEffect} from "react";
+import { useState, useEffect, createContext, useContext, useLayoutEffect} from "react";
 
 const ThemeContext = createContext();
 
 const useTheme = ()=>useContext(ThemeContext);
 
 const ThemeProvider =({children})=>{
+    //system wide theme preference
+    const preferColorSchemeQuery = "(prefers-color-scheme: light)";
 
     const initialTheme =()=>{
-        localStorage.getItem("theme");
+        (matchMedia(preferColorSchemeQuery).matches ? "light" : "dark" ) || localStorage.getItem("theme");
     }
 
     const [theme, setTheme] = useState(initialTheme());
-
-    const toggleTheme=()=>{
-        setTheme((theme)=> theme==="light" ? "dark" : "light")
     
+    const toggleTheme=()=>{
+        setTheme((theme)=> theme ==="light" ? "dark" : "light");
     }
 
     useEffect(()=>{
         localStorage.setItem("theme", theme);
     },[theme]);
 
-    useLayoutEffect(()=>{
-        if (theme==="light"){
-            document.documentElement.setAttribute("theme-attribute", "light");
+    useEffect(()=>{
+        if(theme==="light"){
+            document.documentElement.setAttribute("theme-attribute","light");
         }
         else{
-            document.documentElement.setAttribute("theme-attribute", "dark")
+            document.documentElement.setAttribute("theme-attribute","dark");
         }
-            
         },[theme]
         
     )
