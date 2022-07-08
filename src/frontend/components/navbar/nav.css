@@ -1,0 +1,46 @@
+.title-main{
+    margin: 0rem auto;
+    text-align: center;
+    font-size:1.75rem;
+    padding:3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    color:var(--primary-color);
+}
+
+.nav-test{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
+}
+ 
+.brand-name{
+    font-size: 2rem;
+    margin-left: 3rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family:cursive;
+}
+
+.theme-icon{
+    margin-right: 2rem;
+    height:2rem;
+    width: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.md-30{
+    font-size: 30px;
+}
+.md-36{
+    font-size: 36px;
+}
