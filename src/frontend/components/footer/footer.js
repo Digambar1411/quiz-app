@@ -1,8 +1,8 @@
 import "./footer.css";
 import { useTheme } from "../../contexts/theme-context";
-import lightTwitterLogo from "../../social logos/twitter-light.png";
-import lightGithubLogo from "../../social logos/github-light.png";
-import lightLinkedinLogo from "../../social logos/linkedin-light.png";
+import lightTwitterLogo from "../../social logos/twitter-light-42.png";
+import lightGithubLogo from "../../social logos/github-light-48.png";
+import lightLinkedinLogo from "../../social logos/linkedin-light-48.png";
 
 import twitterDark from "../../social logos/twitter1.png";
 import linkedinDark from "../../social logos/linkedin1.png";
