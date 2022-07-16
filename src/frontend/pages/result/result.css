@@ -85,3 +85,7 @@
 .wrong{
     background-color: rgb(228, 90, 108);
 }
+
+ul{
+    list-style-type:none;
+}
