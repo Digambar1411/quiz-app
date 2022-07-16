@@ -20,10 +20,10 @@ export function Result(){
                 <section className="score-section">Congratulations you scored : {score<1 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
 
                 <div className="question-container flex-col">
-                    {categoryQuestions.map((item)=>{const {questionText, options, userAnswer}=item;
+                    {categoryQuestions.map((item)=>{const {questionText, options, userAnswer,_id}=item;
                         return(
-                            <div className="single-question"> 
-                                <ol type="abc"><li className="question">{questionText}</li></ol>
+                            <div className="single-question" > 
+                                <ul><li className="question" key={questionText} > Q.{_id} : {questionText}</li></ul>
                                 {options.map((option)=>{ const { id, text, isCorrect} = option;
                                     return(
                                        
