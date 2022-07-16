@@ -143,6 +143,42 @@ export const quizzes = [
       {id:uuid(),text:"Charcoal",isCorrect:false}
     ],
     answer: "Graphite"
+  },
+
+  {
+    categoryName: "maths",
+    questionText: "Which Greek letter is used to denote summation in mathematics?",
+    options: [
+      { id: uuid(),text:"Epsilon",isCorrect:false},
+      { id: uuid(),text:"Alpha",isCorrect:false},
+      { id: uuid(),text:"Lambda",isCorrect:false},
+      { id: uuid(),text:"Sigma",isCorrect:true}
+    ],
+    answer: "Sigma"
+  },
+
+  {
+    categoryName: "maths",
+    questionText: "Who invented zero(0)?",
+    options: [ 
+      {id:uuid(),text:"Archimedes",isCorrect:false},  
+      {id:uuid(),text:"Aryabhatta",isCorrect:true},  
+      {id:uuid(),text:"Ramanujan",isCorrect:false},  
+      {id:uuid(),text:"Brahmagupta",isCorrect:false}
+    ],
+    answer: "Aryabhatta"
+  },
+  {
+    categoryName: "science",
+    questionText: "Balloons are filled with?",
+    options: [ 
+      {id:uuid(),text:"Oxyzen",isCorrect:false},  
+      {id:uuid(),text:"Helium",isCorrect:true},  
+      {id:uuid(),text:"Nitrogen",isCorrect:false},  
+      {id:uuid(),text:"argon",isCorrect:false}
+    ],
+    answer: "Helium"
   }
-  
+
+    
 ];
