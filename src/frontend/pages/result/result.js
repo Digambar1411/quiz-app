@@ -17,7 +17,7 @@ export function Result(){
             
             <div className="result-page">
                 <strong className="result-title">Quiz Result</strong>
-                <section className="score-section">Congratulations you scored : {score<10 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
+                <section className="score-section">Congratulations you scored : {score<1 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
 
                 <div className="question-container flex-col">
                     {categoryQuestions.map((item)=>{const {questionText, options, userAnswer}=item;
