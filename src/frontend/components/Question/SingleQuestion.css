@@ -1,0 +1,31 @@
+.question-section{
+    width:95%;
+    gap: 1rem;
+    margin: 0rem auto;
+}
+
+.options{
+    gap:12px;
+}
+
+.question{
+    font-size: 1.5rem;
+}
+
+.options > li{
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: var(--image-background-color);
+    cursor: pointer;
+    width:95%;
+    list-style-type:none;
+}
+
+.options > li:hover{
+    background-color: var(--primary-ascent);
+}
+
+.active-option{
+    background-color: var(--primary-ascent);
+}
