@@ -48,6 +48,7 @@
 .final-options{
     gap:1rem;
 }
+
 .option{
     border: 1px solid black;
     border-radius: 5px;
@@ -80,7 +81,6 @@
 
 .correct{
     background-color: rgb(60, 214, 129);
-    /* for wrong answer */
 }
 
 .wrong{

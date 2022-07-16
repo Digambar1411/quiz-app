@@ -2,7 +2,6 @@ import { useQuestion } from "../../contexts/question-context";
 import { Navbar, Footer} from "../../components/index";
 import { useNavigate } from "react-router-dom";
 import "./result.css";
-import { useEffect } from "react";
 
 export function Result(){
     const { score, selectedOption, categoryQuestions} = useQuestion();
@@ -11,8 +10,6 @@ export function Result(){
     const replayHandler =()=>{
         navigate("/");
     }
-
-    useEffect(()=>{console.log(selectedOption)},[])
 
     return(
         <>
