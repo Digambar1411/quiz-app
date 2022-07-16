@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Footer, Navbar} from "../../components/index";
-import { useQuestion, useCategory} from "../../contexts/index";
+import { useQuestion, useCategory, useTheme} from "../../contexts/index";
 import "./home.css";
 
 export function Home(){
 const { categories } = useCategory();
-const {getSelectedCategoryQuestions} = useQuestion();
+const { getSelectedCategoryQuestions } = useQuestion();
+const { theme} = useTheme();
 
     return(
         <>
@@ -14,10 +15,10 @@ const {getSelectedCategoryQuestions} = useQuestion();
             <div className="main-body">
                 <div className="title-main">Top Quiz Categories</div>
                 <div className="categories-container">
-                    { categories && categories.map(category=>{const  {_id, image, name} = category; 
+                    { categories && categories.map(category=>{const  {_id, image, imageLight, name} = category; 
                     return (
                         <div key={_id} className="category-card">
-                            <img className="category-image" src={ image} alt={name}/>
+                            <img className="category-image" src={ theme==="light" ? imageLight : image} alt={name}/>
                             <button className="category-heading" onClick={()=>getSelectedCategoryQuestions(name)}>{name}</button>
                         </div>)})
                     }
