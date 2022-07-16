@@ -28,11 +28,9 @@ function QuestionProvider({children}){
         const timer=setInterval(()=>{
             setSeconds(seconds-1);
         },1000);
-
         if(seconds===0){
             nextQuestionHandler();
         }
-
         return ()=>clearInterval(timer);
     })
 
@@ -53,13 +51,11 @@ function QuestionProvider({children}){
             
     const nextQuestionHandler = ()=>{
         setSeconds(initialTimerValue);
-        if(curqueIndex===categoryQuestions.length-1)
-        {
-            navigate("/result");
-        }
-        else{
-            setCurqueIndex(curqueIndex+1);
-        }
+        setCurqueIndex(curqueIndex+1);
+    }
+
+    const viewResult=()=>{
+        navigate("/result");
     }
 
     const QuitQuiz=()=>{
@@ -70,13 +66,16 @@ function QuestionProvider({children}){
     const selectOptionHandler = (entireOption)=>{
         if(entireOption.isCorrect){
             setScore(score+1);
-           
         }
-        
-        setSelectedOption([...selectedOption,entireOption]);
+        setSelectedOption(entireOption);
+        console.log(selectedOption);
+
+        // modifying the array of question object by pushing user selected option as userAnswer
+        categoryQuestions[curqueIndex].userAnswer = entireOption.text;
+
     }
 
-    return <QuestionContext.Provider value= {{category, score, seconds, questions, curqueIndex, selectedOption, categoryQuestions, selectOptionHandler, nextQuestionHandler, QuitQuiz, getSelectedCategoryQuestions}} >{children}
+    return <QuestionContext.Provider value= {{category, score, seconds, questions, curqueIndex, viewResult, selectedOption, categoryQuestions, selectOptionHandler, nextQuestionHandler, QuitQuiz, getSelectedCategoryQuestions}} >{children}
     </QuestionContext.Provider>
 }
 

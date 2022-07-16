@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./result.css";
 
 export function Result(){
-    const { score, selectedOption, categoryQuestions} = useQuestion();
+    const { score, categoryQuestions} = useQuestion();
     const navigate  = useNavigate();
 
     const replayHandler =()=>{
@@ -17,10 +17,10 @@ export function Result(){
             
             <div className="result-page">
                 <strong className="result-title">Quiz Result</strong>
-                <section className="score-section">Congratulations you scored : {"0"+score} out of {"0"+categoryQuestions.length}</section>
+                <section className="score-section">Congratulations you scored : {score<10 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
 
                 <div className="question-container flex-col">
-                    {categoryQuestions.map((item)=>{const {questionText, options}=item;
+                    {categoryQuestions.map((item)=>{const {questionText, options, userAnswer}=item;
                         return(
                             <div className="single-question"> 
                                 <ol type="abc"><li className="question">{questionText}</li></ol>
@@ -32,7 +32,7 @@ export function Result(){
                                                 <li 
                                                     className={`
                                                     ${isCorrect ? "option correct": "option"} 
-                                                    ${selectedOption.id === id & isCorrect ? "option correct":(selectedOption.id === id & !isCorrect ? "option wrong": "option") }
+                                                    ${userAnswer === text & isCorrect ? "option correct":(userAnswer === text & !isCorrect ? "option wrong": "option") }
                                                     `} 
                                                     key={id}>{text}
                                                 </li>
