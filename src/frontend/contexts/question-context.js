@@ -46,7 +46,7 @@ function QuestionProvider({children}){
         navigate("/rules");
         const getCategoryQuestions = ()=> questions.filter(question=>question.categoryName===name.toLowerCase())
         setCategoryQuestions(getCategoryQuestions());
-        setSelectedOption([]);
+        setSelected([]);
     }
             
     const nextQuestionHandler = ()=>{
@@ -69,12 +69,11 @@ function QuestionProvider({children}){
         }
         setSelectedOption(entireOption);
         console.log(selectedOption);
-
         // modifying the array of question object by pushing user selected option as userAnswer
         categoryQuestions[curqueIndex].userAnswer = entireOption.text;
-
     }
 
+   
     return <QuestionContext.Provider value= {{category, score, seconds, questions, curqueIndex, viewResult, selectedOption, categoryQuestions, selectOptionHandler, nextQuestionHandler, QuitQuiz, getSelectedCategoryQuestions}} >{children}
     </QuestionContext.Provider>
 }

@@ -5,11 +5,10 @@ import "./question-page.css";
 
 export function QuestionPage(){
 
-    const [isActive, setIsActive] = useState(false);
     const { nextQuestionHandler, category, categoryQuestions, seconds, 
-        QuitQuiz, curqueIndex,  selectOptionHandler} = useQuestion();
-  
-    return (
+        QuitQuiz, curqueIndex, selectOptionHandler, viewResult, selectedOption} = useQuestion();
+      
+        return (
         <>
             <Navbar />
             
@@ -32,13 +31,13 @@ export function QuestionPage(){
                         {categoryQuestions[curqueIndex].questionText} 
                     </div>
                     {
-                        categoryQuestions[curqueIndex].options.map((option)=>{ const {id,text,isCorrect}=option;
+                        categoryQuestions[curqueIndex].options.map((option)=>{ const {id,text}=option;
                             return (
                             <div className="options flex-col">
-                                <button 
-                                    className={ isActive ? "active-option" :"" }  
+                                <button
+                                    className={`option-button ${selectedOption.text===text? "active-option-button" :""}`}  
                                     key={id} 
-                                    onClick={()=>selectOptionHandler(option)}>{text}
+                                    onClick={()=>{selectOptionHandler(option)}}>{text}
                                 </button>
                             </div>)
                         })
@@ -47,8 +46,8 @@ export function QuestionPage(){
 
                 <div className="controls">
                     <button className="nav-btn" onClick={QuitQuiz}> Quit </button>
-
-                    <button className="nav-btn" onClick={nextQuestionHandler}> {"Next >"} </button>
+                    <button className="nav-btn" onClick={categoryQuestions.length===curqueIndex+1 ? viewResult : nextQuestionHandler}> {categoryQuestions.length===curqueIndex+1 ? "Result": "Next >"} 
+                    </button>
                 </div>
             </div>
 
