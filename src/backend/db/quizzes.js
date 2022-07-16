@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 export const quizzes = [
   {
     categoryName: "maths",
+    _id:"1",
     questionText: "A triangle where one angle is 90 degree is called",
     options: [
       { id: uuid(),text:"Acute",isCorrect:false},
@@ -15,6 +16,7 @@ export const quizzes = [
 
   {
     categoryName: "maths",
+    _id:"2",
     questionText: "What is the area of a triangle with base 10 cm and height 25 cm?",
     options: [ 
       {id:uuid(),text:"35 sq cm" ,isCorrect:false},  
@@ -27,6 +29,7 @@ export const quizzes = [
 
   {
     categoryName: "maths",
+    _id:"3",
     questionText: "A triangle where all sides are congruent is called",
     options: [
       {id:uuid(),text:"Scalene",isCorrect:false}, 
@@ -39,6 +42,7 @@ export const quizzes = [
 
   {
     categoryName: "web developmemt",
+    _id:"1",
     questionText: "Choose the correct HTML element to define important text",
     options: [
       { id: uuid(),text:"<strong>",isCorrect:true},
@@ -51,6 +55,7 @@ export const quizzes = [
 
   {
     categoryName: "web developmemt",
+    _id:"2",
     questionText: "What will be the output of console.log(typeof typeof 1);",
     options: [
       { id: uuid(),text:"1",isCorrect:false},
@@ -63,6 +68,7 @@ export const quizzes = [
 
   {
     categoryName: "web developmemt",
+    _id:"3",
     questionText: "What will be the output of console.log(('b' + 'a' + + 'a' + 'a').toLowerCase());",
     options: [
       { id: uuid(),text:"banana",isCorrect:true},
@@ -76,6 +82,7 @@ export const quizzes = [
  
   {     
     categoryName: "physics",
+    _id:"1",
     questionText: "The sky appears blue because of",
         options: [ 
           {id:uuid(),text:"Atmospheic water vapour",isCorrect:false},  
@@ -88,6 +95,7 @@ export const quizzes = [
 
   {
     categoryName: "physics",
+    _id:"2",
     questionText: "Which of the below parts of sunlight makes solar cooker hot?",
     options: [ 
       {id:uuid(),text:"Ultraviolet",isCorrect:false},  
@@ -100,6 +108,7 @@ export const quizzes = [
 
   {
     categoryName: "physics",
+    _id:"3",
     questionText: "The speed of light, with the rise in the temperature of the medium",
     options: [
       {id:uuid(),text:"Suddenly drops",isCorrect:false}, 
@@ -112,6 +121,7 @@ export const quizzes = [
 
   {
     categoryName: "science",
+    _id:"1",
     questionText:"In fireworks, the green flame is produced because of",
     options: [ 
       {id:uuid(),text:"Sodium",isCorrect:false},  
@@ -124,6 +134,7 @@ export const quizzes = [
   
   {
     categoryName: "science",
+    _id:"2",
     questionText: "Heavy water is",
     options: [ 
       {id:uuid(),text:"Deuterium oxide",isCorrect:true},  
@@ -135,6 +146,7 @@ export const quizzes = [
   },
   {
     categoryName: "science",
+    _id:"3",
     questionText: "Which of the following is used in pencils?",
     options: [ 
       {id:uuid(),text:"Graphite",isCorrect:true},  
@@ -147,6 +159,7 @@ export const quizzes = [
 
   {
     categoryName: "maths",
+    _id:"4",
     questionText: "Which Greek letter is used to denote summation in mathematics?",
     options: [
       { id: uuid(),text:"Epsilon",isCorrect:false},
@@ -159,6 +172,7 @@ export const quizzes = [
 
   {
     categoryName: "maths",
+    _id:"5",
     questionText: "Who invented zero(0)?",
     options: [ 
       {id:uuid(),text:"Archimedes",isCorrect:false},  
@@ -170,6 +184,7 @@ export const quizzes = [
   },
   {
     categoryName: "science",
+    _id:"4",
     questionText: "Balloons are filled with?",
     options: [ 
       {id:uuid(),text:"Oxyzen",isCorrect:false},  
