@@ -10,6 +10,7 @@ import { v4 as uuid } from "uuid";
     _id: uuid(),
     name:"Maths",
     image:"assets/maths.svg",
+    imageLight:"assets/light_maths.svg",
     description:"Quizes based on maths",
   },
 
@@ -17,6 +18,7 @@ import { v4 as uuid } from "uuid";
     _id: uuid(),
     name:"Science",
     image:"assets/science.svg",
+    imageLight:"assets/light_science.svg",
     description:"Quizes based on science",
   },
 
@@ -24,6 +26,7 @@ import { v4 as uuid } from "uuid";
     _id: uuid(),
     name:"Physics",
     image:"assets/physics.svg",
+    imageLight:"assets/light_physics.svg",
     description:"Quizes based on physics",
   },
 
@@ -31,6 +34,7 @@ import { v4 as uuid } from "uuid";
     _id: uuid(),
     name:"Web Developmemt",
     image:"assets/web.svg",
+    imageLight:"assets/light_web.svg",
     description:"Quizes based on web developmemnt",
   }
   

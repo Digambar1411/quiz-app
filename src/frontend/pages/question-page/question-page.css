@@ -1,14 +1,13 @@
 .question-area{
     width:650px;
     height:auto;
-    margin:2rem auto;
+    margin:1.5rem auto;
     margin-top: 7rem;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
     gap:1.5rem;
     background-color:var(--image-background-color);
     border-radius:1rem;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
-    
 }
 
 .question{
@@ -16,15 +15,16 @@
 }
 
 .question-section{
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    width:95%;
+    gap: 1rem;
+    margin: 0rem auto;
 }
 
 .quiz-title{
     margin: 0.5rem auto;
     text-align: center;
     font-size: 1.5rem;
-    color:var(--primary-color)
+    color:var(--primary-color);
 }
 
 .options{
@@ -35,7 +35,7 @@ ul{
     padding-inline-start: 00px;
 }
 
-.options > li{
+.option-button{
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -43,18 +43,26 @@ ul{
     cursor: pointer;
     width:95%;
     list-style-type:none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1rem;
 }
 
-.options > li:hover{
-    background-color: var(--primary-color);
-}
-
-.active-option{
+.option-button:hover{
     background-color: var(--primary-ascent);
+}
+
+.active-option-button{
+    background-color: var(--primary-ascent); 
 }
 
 .space-btwn{
     justify-content: space-between;
+}
+
+.controls{
+    display: flex;
+    justify-content:space-between;
 }
 
 .nav-btn{
@@ -72,5 +80,15 @@ ul{
 .timer{
     gap:8px;
 }
+
+
+
+
+
+
+
+
+
+
 
 

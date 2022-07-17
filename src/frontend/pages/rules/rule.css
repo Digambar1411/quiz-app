@@ -1,6 +1,6 @@
 .rule-page{
     position: relative;
-    height:350px;
+    height:fit-content;
     margin:4rem auto;
     margin-top:8rem;
     width: 40%;
@@ -16,6 +16,7 @@
 }
 
 .rules{
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 10px;
