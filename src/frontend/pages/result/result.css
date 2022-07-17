@@ -3,7 +3,7 @@
     margin-top:6rem;
     width: 85%;
     padding: 2rem;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 .result-title{
@@ -12,7 +12,7 @@
 }
 
 .score-section{
-    padding: 1rem;
+   text-align: center;
     font-size: 1.65rem;
     margin: 1rem 0;
 }
@@ -26,23 +26,20 @@
 .question-container{
     background-color:var(--image-background-color);
     margin:0 auto;
-    width: 85%;
+    width: 100%;
     gap: 3rem;
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
-    padding: 2rem 0;
-}
-
-.single-question{
-    margin:0 auto;
-    width: 90%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 .single-question-options{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
-.single-question-options> ul{
-    margin-inline-start: 2rem;
+ul{
+    margin-inline-start: 3.5rem;
+    margin-inline-end: 1rem;
 }
 
 .final-options{
@@ -54,7 +51,7 @@
     border-radius: 5px;
     padding: 0.65rem 1rem;
     cursor: pointer;
-    width:95%;
+    width:90%;
     list-style-type:none;
 }
 

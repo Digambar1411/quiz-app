@@ -13,6 +13,7 @@
 .rule-heading{
     padding: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .rules{
@@ -20,7 +21,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 1.25rem;
+}
+
+li, button{
+    font-size:1.25rem;
 }
 
 .play-btn{
@@ -36,6 +40,7 @@
     justify-content: center;
     font-weight:bold;
 }
+
 
 .play-btn:hover{
     cursor: pointer;
