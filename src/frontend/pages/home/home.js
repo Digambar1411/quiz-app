@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { Footer, Navbar} from "../../components/index";
 import { useQuestion, useCategory, useTheme} from "../../contexts/index";
 import "./home.css";
@@ -12,7 +11,7 @@ const { theme} = useTheme();
         <>
            <Navbar />
 
-            <div className="main-body">
+            <div className="main-home-body">
                 <div className="title-main">Top Quiz Categories</div>
                 <div className="categories-container">
                     { categories && categories.map(category=>{const  {_id, image, imageLight, name} = category; 
