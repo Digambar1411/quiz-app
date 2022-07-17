@@ -53,6 +53,7 @@ ul{
     cursor: pointer;
     width:90%;
     list-style-type:none;
+    font-size: 1.25rem;
 }
 
 .replay-btn{
@@ -62,7 +63,7 @@ ul{
     background-color: var(--primary-color);
     border: none;
     border-radius: 8px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 2rem auto;
     margin-top:3rem;
     display:flex;

@@ -11,7 +11,7 @@ export const quizzes = [
       { id: uuid(),text:"Equilateral",isCorrect:false},
       { id: uuid(),text:"Obtuse",isCorrect:false}
     ],
-    answer: "Equilateral"
+    answer: "Right"
   },
 
   {
@@ -37,7 +37,7 @@ export const quizzes = [
       {id:uuid(),text:"Equilateral",isCorrect:true}, 
       {id:uuid(),text:"Right",isCorrect:false}
     ],
-    answer: "Attachment Issues",
+    answer: "Equilateral",
   },
 
   {
@@ -116,7 +116,7 @@ export const quizzes = [
       {id:uuid(),text:"Decreases",isCorrect:false}, 
       {id:uuid(),text:"Increases",isCorrect:false}
     ],
-    answer: "remains unaltered"
+    answer: "Remains unaltered"
   },
 
   {
@@ -190,7 +190,7 @@ export const quizzes = [
       {id:uuid(),text:"Oxyzen",isCorrect:false},  
       {id:uuid(),text:"Helium",isCorrect:true},  
       {id:uuid(),text:"Nitrogen",isCorrect:false},  
-      {id:uuid(),text:"argon",isCorrect:false}
+      {id:uuid(),text:"Argon",isCorrect:false}
     ],
     answer: "Helium"
   }

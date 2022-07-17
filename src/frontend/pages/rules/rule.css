@@ -23,7 +23,7 @@
     gap: 10px;
 }
 
-li, button{
+li{
     font-size:1.25rem;
 }
 
@@ -40,7 +40,6 @@ li, button{
     justify-content: center;
     font-weight:bold;
 }
-
 
 .play-btn:hover{
     cursor: pointer;
