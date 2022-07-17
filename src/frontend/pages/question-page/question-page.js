@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Footer, Navbar} from "../../components/index";
 import { useQuestion } from "../../contexts/index";
 import "./question-page.css";
 
 export function QuestionPage(){
-
-    const { nextQuestionHandler, category, categoryQuestions, seconds, 
+    const { nextQuestionHandler, category, categoryQuestions, seconds, error,
         QuitQuiz, curqueIndex, selectOptionHandler, viewResult, selectedOption} = useQuestion();
       
         return (
@@ -30,6 +28,9 @@ export function QuestionPage(){
                     <div className="question"> 
                         {categoryQuestions[curqueIndex].questionText} 
                     </div>
+
+                    {error && <p className="error-msg">please select an option</p>}
+
                     {
                         categoryQuestions[curqueIndex].options.map((option)=>{ const {id,text}=option;
                             return (
