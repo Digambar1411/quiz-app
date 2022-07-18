@@ -1,0 +1,138 @@
+.main-auth-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-page{
+  background-color:var(--background-color);
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card{
+    margin-top:7rem;
+    margin-bottom: 2rem;
+    min-width:215px;
+    width:350px;
+    background-color: var(--image-background-color);
+    padding:2rem;
+    border-radius: 4px;
+    height: fit-content; 
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
+    font-size:1rem;
+}
+
+.auth-heading{
+    text-align: center;
+    font-size: 1.75rem;
+    color:var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.signup-btn,.login-btn{
+    padding: 4px;
+    width:90%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    margin: 0rem auto;
+    display:flex;
+    justify-content: center;
+    font-weight:bold;
+}
+
+.signup-btn,.login-btn:hover{
+    cursor: pointer;
+    background-color:var(--primary-ascent);
+}
+
+.control-icon:hover{
+    color: var(--primary-color);
+}
+
+.auth-controls{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.login-control{
+    justify-content: center;
+}
+
+.signup-control{
+    justify-content: space-between;
+}
+
+.input-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input{
+    padding:4px 8px;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    font-size: 1.10rem;
+    color: var(--foreground-color);
+}
+
+.input-label{
+    font-size: 1.25rem;
+}
+
+.checkbox-input-label{
+    display: flex;
+}
+
+input{
+    color:#3B3C36;
+    background-color: var(--background-color);
+}
+
+input[type="checkbox"]:select{
+    color:var(--primary-color);
+}
+
+.input-checkbox{
+    height: 1rem;
+    width: 1rem;
+    margin-right:0.4rem;
+    margin-top: 4px;
+}
+
+.link-forgot-password{
+    text-decoration: none;
+    color:var(--color-primary);
+    font-size:small
+}
+
+.password-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-col-login{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flex-center-login{
+    flex-direction: row;
+    gap: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-left{
+    display: flex;
+    justify-content: flex-start;
+}
