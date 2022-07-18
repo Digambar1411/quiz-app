@@ -1,6 +1,6 @@
 import "./App.css";
 import {Routes, Route } from "react-router-dom";
-import { Home, Result, QuestionPage, Rule} from "./frontend/pages/index"
+import { Home, Result, QuestionPage, Rule} from "./frontend/pages"
 
 
 

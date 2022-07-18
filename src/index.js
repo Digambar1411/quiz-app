@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
-import { QuestionProvider,CategoryProvider,ThemeProvider} from "./frontend/contexts/index"
+import { QuestionProvider,CategoryProvider,ThemeProvider} from "./frontend/contexts"
 
 // Call make Server
 makeServer();
