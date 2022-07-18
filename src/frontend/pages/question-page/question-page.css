@@ -1,9 +1,10 @@
 .question-area{
-    width:650px;
+    box-sizing: border-box;
+    width: 70%;
     height:auto;
     margin:1.5rem auto;
     margin-top: 7rem;
-    padding: 2rem 3rem;
+    padding: 2rem;
     gap:1.5rem;
     background-color:var(--image-background-color);
     border-radius:1rem;
@@ -23,7 +24,7 @@
 .quiz-title{
     margin: 0.5rem auto;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color:var(--primary-color);
 }
 
@@ -45,7 +46,7 @@ ul{
     list-style-type:none;
     display: flex;
     justify-content: flex-start;
-    font-size: 1rem;
+    
 }
 
 .option-button:hover{
@@ -63,9 +64,11 @@ ul{
 .controls{
     display: flex;
     justify-content:space-between;
+    padding: 0 1rem;
+    align-items: center;
 }
 
-.nav-btn{
+.control-btn{
     font-size: 1rem;
     background: none;
     border:none;
@@ -73,12 +76,25 @@ ul{
     cursor: pointer;
 }
 
-.nav-btn:hover{
+.control-btn:hover{
     color: var(--primary-color);
 }
 
 .timer{
-    gap:8px;
+    gap:0.5rem;
+    
+}
+
+.timer-icon{
+    font-size: 1.25rem;
+}
+
+.error-msg{
+    padding: 0.5rem 1rem;
+    width: 70%;
+    background-color: rgb(253, 74, 98);
+    border: 1px solid rgb(228, 90, 108);;
+
 }
 
 

@@ -1,6 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { Footer, Navbar} from "../../components/index";
-import { useQuestion, useCategory, useTheme} from "../../contexts/index";
+import { Footer, Navbar} from "../../components";
+import { useQuestion, useCategory, useTheme} from "../../contexts";
 import "./home.css";
 
 export function Home(){
@@ -12,10 +11,10 @@ const { theme} = useTheme();
         <>
            <Navbar />
 
-            <div className="main-body">
+            <div className="main-home-body">
                 <div className="title-main">Top Quiz Categories</div>
                 <div className="categories-container">
-                    { categories && categories.map(category=>{const  {_id, image, imageLight, name} = category; 
+                    { categories && categories.map(({_id, image, imageLight, name})=>{
                     return (
                         <div key={_id} className="category-card">
                             <img className="category-image" src={ theme==="light" ? imageLight : image} alt={name}/>

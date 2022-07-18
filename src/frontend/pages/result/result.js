@@ -1,5 +1,5 @@
 import { useQuestion } from "../../contexts/question-context";
-import { Navbar, Footer} from "../../components/index";
+import { Navbar, Footer} from "../../components";
 import { useNavigate } from "react-router-dom";
 import "./result.css";
 
@@ -17,14 +17,14 @@ export function Result(){
             
             <div className="result-page">
                 <strong className="result-title">Quiz Result</strong>
-                <section className="score-section">Congratulations you scored : {score<1 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
+                <section className="score-section">{ score*10> categoryQuestions.length*10/2 ? "Congratulations 🎉, " : "Give it try once 😔, " }you scored {score<1 ? "0"+score : score*10} out of {categoryQuestions.length*10}</section>
 
                 <div className="question-container flex-col">
-                    {categoryQuestions.map((item)=>{const {questionText, options, userAnswer,_id}=item;
+                    {categoryQuestions.map(({questionText, options, userAnswer,_id})=>{
                         return(
                             <div className="single-question" > 
-                                <ul><li className="question" key={questionText} > Q.{_id} : {questionText}</li></ul>
-                                {options.map((option)=>{ const { id, text, isCorrect} = option;
+                                <div className="question" key={questionText} > Q.{_id} : {questionText}</div>
+                                {options.map(({ id, text, isCorrect} )=>{ 
                                     return(
                                        
                                         <div className="single-question-options">
