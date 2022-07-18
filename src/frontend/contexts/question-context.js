@@ -20,7 +20,7 @@ function QuestionProvider({children}){
     const [error , setError]= useState(false);
 
     const [questions, setQuestions] = useState([initialQuestions]);
-    const [curqueIndex, setCurqueIndex] = useState(initialIndexValue); 
+    const [curQueIndex, setCurQueIndex] = useState(initialIndexValue); 
     const [categoryQuestions, setCategoryQuestions] = useState([]);
 
     useEffect(()=>{
@@ -29,7 +29,7 @@ function QuestionProvider({children}){
         },1000);
         if(seconds===0){
             setSeconds(initialTimerValue);
-            setCurqueIndex(curqueIndex+1);
+            setCurQueIndex(curQueIndex+1);
         }
         return ()=>clearInterval(timer);
     })
@@ -42,7 +42,7 @@ function QuestionProvider({children}){
     const getSelectedCategoryQuestions = (name)=>{
         setCategory(name)
         setScore(initialScore);
-        setCurqueIndex(initialIndexValue);  //if curqueIndex is not reseted then for other category, quiz will start from last categories current index question. hence reseting index to 0
+        setCurQueIndex(initialIndexValue);  //if curQueIndex is not reseted then for other category, quiz will start from last categories current index question. hence reseting index to 0
         getData();    // fetches questions from DB
         setCategoryQuestions(questions.filter(question=>question.categoryName===name.toLowerCase()));
         setSelectedOption([]);
@@ -52,7 +52,7 @@ function QuestionProvider({children}){
     const nextQuestionHandler = ()=>{
         if(selectedOption.length>0 || selectedOption.length===undefined){
             setSeconds(initialTimerValue);
-            setCurqueIndex(curqueIndex+1);
+            setCurQueIndex(curQueIndex+1);
         }
         else{
             setError(true);
@@ -78,10 +78,10 @@ function QuestionProvider({children}){
         }
         setSelectedOption(entireOption);
         // modifying the array of question object by pushing user selected option as userAnswer
-        categoryQuestions[curqueIndex].userAnswer = entireOption.text;
+        categoryQuestions[curQueIndex].userAnswer = entireOption.text;
     }
 
-    return <QuestionContext.Provider value= {{category, score, seconds, questions, curqueIndex, error, viewResult, selectedOption, categoryQuestions, selectOptionHandler, nextQuestionHandler, QuitQuiz, getSelectedCategoryQuestions}} >{children}
+    return <QuestionContext.Provider value= {{category, score, seconds, questions, curQueIndex, error, viewResult, selectedOption, categoryQuestions, selectOptionHandler, nextQuestionHandler, QuitQuiz, getSelectedCategoryQuestions}} >{children}
     </QuestionContext.Provider>
 }
 
