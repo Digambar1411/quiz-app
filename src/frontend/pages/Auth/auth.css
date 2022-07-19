@@ -15,10 +15,10 @@
 .login-card{
     margin-top:7rem;
     margin-bottom: 2rem;
-    min-width:215px;
-    width:350px;
+    width:70%;
+    max-width:300px;
     background-color: var(--image-background-color);
-    padding:2rem;
+    padding:2rem 1rem;
     border-radius: 4px;
     height: fit-content; 
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 20%);
@@ -30,42 +30,6 @@
     font-size: 1.75rem;
     color:var(--primary-color);
     margin-bottom: 1.5rem;
-}
-
-.signup-btn,.login-btn{
-    padding: 4px;
-    width:90%;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.25rem;
-    margin: 0rem auto;
-    display:flex;
-    justify-content: center;
-    font-weight:bold;
-}
-
-.signup-btn,.login-btn:hover{
-    cursor: pointer;
-    background-color:var(--primary-ascent);
-}
-
-.control-icon:hover{
-    color: var(--primary-color);
-}
-
-.auth-controls{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.login-control{
-    justify-content: center;
-}
-
-.signup-control{
-    justify-content: space-between;
 }
 
 .input-div{
@@ -95,27 +59,86 @@ input{
     background-color: var(--background-color);
 }
 
-input[type="checkbox"]:select{
-    color:var(--primary-color);
+input[type=checkbox]{
+    accent-color: var(--primary-color);
 }
 
 .input-checkbox{
     height: 1rem;
     width: 1rem;
     margin-right:0.4rem;
-    margin-top: 4px;
 }
 
 .link-forgot-password{
     text-decoration: none;
     color:var(--color-primary);
-    font-size:small
+    font-size:0.75rem
 }
 
 .password-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.auth-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-btn{
+    padding: 4px;
+    width:90%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    margin: 0rem auto;
+    display:flex;
+    justify-content: center;
+}
+
+.auth-btn:hover{
+    cursor: pointer;
+    background-color:var(--primary-ascent);
+}
+
+.test-btn{
+    background-color: var(--image-background-color);
+    border: 1px solid var(--color-grey);
+}
+
+.login,.signup{
+    background-color: var(--primary-color);
+}
+
+.auth-control-btn{
+    display: flex;
+    font-size: 1rem;
+    background: none;
+    border:none;
+    cursor: pointer;
+}
+
+.auth-control-btn:hover{
+    color: var(--primary-color);
+}
+
+
+.control-icon:hover{
+    color: var(--primary-color);
+}
+
+.auth-controls{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.login-control{
+    justify-content: center;
+}
+
+.signup-control{
+    justify-content: space-between;
 }
 
 .flex-col-login{
@@ -136,3 +159,9 @@ input[type="checkbox"]:select{
     display: flex;
     justify-content: flex-start;
 }
+
+.control-icon{
+    font-size: 1rem;
+    margin-left:4px;
+}
+
