@@ -12,7 +12,6 @@ export function Login(){
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
-
     const loginHandler=async()=>{
         
             try{
@@ -33,7 +32,6 @@ export function Login(){
                 console.log(error)
             }
         
-      
     }
     
     return (

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Footer, Navbar} from "../../components";
 import { useQuestion, useCategory, useTheme, useAuth} from "../../contexts";
 import "./home.css";

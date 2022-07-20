@@ -2,9 +2,7 @@ import "./rule.css";
 import { Footer, Navbar } from "../../components";
 import { useNavigate } from "react-router-dom";
 
-
 export function Rule(){
-
     const navigate = useNavigate();
  
     return(

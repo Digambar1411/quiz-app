@@ -2,7 +2,6 @@ import { useState, useContext, createContext, useEffect} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
 const AuthContext = createContext()
 
 const useAuth =()=> useContext(AuthContext);
@@ -33,7 +32,6 @@ const AuthProvider =({children})=>{
         navigate("/")
     }
     
-
     return(
         <AuthContext.Provider value={{guestLoginHandler,logoutHandler, isLoggedin }}>{children}
         </AuthContext.Provider>

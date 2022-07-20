@@ -20,7 +20,6 @@ export function Signup(){
         catch{
 
         }
-        
     }
 
     return(
