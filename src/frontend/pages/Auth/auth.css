@@ -80,6 +80,7 @@ input[type=checkbox]{
     justify-content: space-between;
     align-items: center;
 }
+
 .auth-btns{
     display: flex;
     flex-direction: column;
@@ -102,12 +103,12 @@ input[type=checkbox]{
     background-color:var(--primary-ascent);
 }
 
-.test-btn{
+.login{
     background-color: var(--image-background-color);
-    border: 1px solid var(--color-grey);
+    border: 1px solid var(--primary-color);
 }
 
-.login,.signup{
+.guest-login-btn,.signup{
     background-color: var(--primary-color);
 }
 
@@ -117,28 +118,20 @@ input[type=checkbox]{
     background: none;
     border:none;
     cursor: pointer;
+    color:var(--primary-color);
+    justify-content: center;
 }
 
 .auth-control-btn:hover{
-    color: var(--primary-color);
-}
-
-
-.control-icon:hover{
-    color: var(--primary-color);
+    color: var(--primary-ascent);
 }
 
 .auth-controls{
     margin-top: 1rem;
     display: flex;
     align-items: center;
-}
-.login-control{
     justify-content: center;
-}
-
-.signup-control{
-    justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .flex-col-login{
@@ -165,3 +158,6 @@ input[type=checkbox]{
     margin-left:4px;
 }
 
+Link{
+    text-decoration: none;
+}
