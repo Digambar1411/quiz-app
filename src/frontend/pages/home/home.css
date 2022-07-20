@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+
 *{
     margin: 0;
     color:var(--foreground-color);
-    font-family:cursive;
+    font-family: 'Albert Sans', sans-serif;
     font-size: 1rem;
 }
 
