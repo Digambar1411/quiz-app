@@ -39,14 +39,22 @@ function QuestionProvider({children}){
         setQuestions(response.data.quizes);
     }
 
-    const getSelectedCategoryQuestions = (name)=>{
-        setCategory(name)
-        setScore(initialScore);
-        setCurQueIndex(initialIndexValue);  //if curQueIndex is not reseted then for other category, quiz will start from last categories current index question. hence reseting index to 0
-        getData();    // fetches questions from DB
-        setCategoryQuestions(questions.filter(question=>question.categoryName===name.toLowerCase()));
-        setSelectedOption([]);
-        navigate("/rules");
+    const getSelectedCategoryQuestions = (name, isLoggedin)=>{
+            setCategory(name)
+            setScore(initialScore);
+            setCurQueIndex(initialIndexValue);  //if curQueIndex is not reseted then for other category, quiz will start from last categories current index question. hence reseting index to 0
+            getData();    // fetches questions from DB
+            setCategoryQuestions(questions.filter(question=>question.categoryName===name.toLowerCase()));
+            setSelectedOption([]);
+
+        if(isLoggedin){
+            navigate("/rules");
+        }
+
+        else{
+            navigate("/login");
+        }
+       
     }
             
     const nextQuestionHandler = ()=>{
