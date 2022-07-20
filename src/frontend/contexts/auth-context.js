@@ -10,7 +10,7 @@ const useAuth =()=> useContext(AuthContext);
 const AuthProvider =({children})=>{
     const navigate = useNavigate();
 
-    const [isLoggedin, setIsLoggedin] = useState(false)
+    const [isLoggedin, setIsLoggedin] = useState(localStorage.getItem("token") ? true : false)
 
     const guestLoginHandler= async()=>{
         const response = await axios.post('/api/auth/login',{
