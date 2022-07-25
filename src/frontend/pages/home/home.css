@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+
 *{
     margin: 0;
     color:var(--foreground-color);
-    font-family:cursive;
+    font-family: 'Albert Sans', sans-serif;
     font-size: 1rem;
 }
 
@@ -138,6 +140,11 @@
     ul{
         margin-inline-start: 1.5rem;
         margin-inline-end: 2rem;
+    }
+
+    .login-card{
+        width: 70%;
+        max-width: 240px;
     }
 }
 

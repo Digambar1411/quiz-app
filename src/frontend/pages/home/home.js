@@ -1,11 +1,12 @@
 import { Footer, Navbar} from "../../components";
-import { useQuestion, useCategory, useTheme} from "../../contexts";
+import { useQuestion, useCategory, useTheme, useAuth} from "../../contexts";
 import "./home.css";
 
 export function Home(){
 const { categories } = useCategory();
 const { getSelectedCategoryQuestions } = useQuestion();
 const { theme} = useTheme();
+const { isLoggedin} = useAuth();
 
     return(
         <>
@@ -18,7 +19,7 @@ const { theme} = useTheme();
                     return (
                         <div key={_id} className="category-card">
                             <img className="category-image" src={ theme==="light" ? imageLight : image} alt={name}/>
-                            <button className="category-heading" onClick={()=>getSelectedCategoryQuestions(name)}>{name}</button>
+                            <button className="category-heading" onClick={()=>getSelectedCategoryQuestions(name,isLoggedin)}>{name}</button>
                         </div>)})
                     }
                 </div>
