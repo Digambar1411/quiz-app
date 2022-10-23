@@ -1,7 +1,5 @@
 # NeoQuiz Web App
 
-## Quick Start
-
 Preview Link : https://my-neoquiz.netlify.app/
 
 ## Run Locally
