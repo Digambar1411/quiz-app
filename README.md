@@ -17,9 +17,9 @@ Clone the project
 - Question page
 - Result page
 - Authentication
-  - Login
-  - Sigup
-  - Guest Login
+  - *Login*
+  - *Signup*
+  - *Guest Login*
 - Resposive Web app
 
 ## Tech Stack
